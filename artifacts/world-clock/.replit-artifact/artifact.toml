@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "World Clock"
+version = "1.0.0"
+id = "artifacts/world-clock"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23429
+
+[services.development]
+run = "pnpm --filter @workspace/world-clock run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/world-clock", "run", "build" ]
+publicDir = "artifacts/world-clock/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23429"
+BASE_PATH = "/"
