@@ -578,7 +578,7 @@
 @media (max-width: 640px) {
   .app-wrapper {
     min-height: 100dvh;
-    background-position: center center;
+    background-position: 46% top;
     background-size: cover;
   }
 
