@@ -152,9 +152,9 @@ export default function WorldClock() {
         {/* Title */}
         <div className="wc-title-row">
           <h1 className="wc-title">World Clock</h1>
-          <div className="wc-title-icons">
-            <MapPin size={18} className="icon-pin" />
-            <Globe size={20} className="icon-globe" />
+          <div className="wc-title-icon-wrap">
+            <Globe size={36} className="icon-globe" />
+            <MapPin size={22} className="icon-pin" />
           </div>
         </div>
 

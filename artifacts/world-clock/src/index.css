@@ -255,18 +255,25 @@
   letter-spacing: -0.02em;
 }
 
-.wc-title-icons {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.icon-pin {
-  color: hsl(0 72% 51%);
+.wc-title-icon-wrap {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
 }
 
 .icon-globe {
-  color: hsl(var(--primary));
+  position: absolute;
+  inset: 0;
+  color: hsl(197 60% 72%);
+}
+
+.icon-pin {
+  position: absolute;
+  top: -4px;
+  left: -6px;
+  color: hsl(348 80% 75%);
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.18));
 }
 
 /* --- SELECTOR --- */
